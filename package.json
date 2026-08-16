@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "check": "pnpm format:check && pnpm lint && pnpm typecheck"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.0",
