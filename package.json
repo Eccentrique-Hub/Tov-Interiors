@@ -10,7 +10,7 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "rimraf .next && tsc --noEmit",
     "check": "pnpm format:check && pnpm lint && pnpm typecheck",
     "prepare": "husky"
   },
