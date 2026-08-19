@@ -3,27 +3,31 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --color-background: #f7f1ea;
-  --color-surface: #efe7dc;
-  --color-foreground: #1e1b19;
-  --color-text-secondary: #6b6058;
-  --color-accent: #c1502e;
-  --color-accent-foreground: #fff8f5;
-  --color-inverted-surface: #17140f;
-  --color-inverted-foreground: #f7efeb;
-  --color-line: #6b6058;
+  --color-background: #f6f0e6;
+  --color-surface: #ede3d4;
+  --color-foreground: #2f1d12;
+  --color-text-secondary: #716055;
+  --color-accent: #b8872d;
+  --color-accent-foreground: #2b190f;
+
+  --color-inverted-surface: #402513;
+  --color-inverted-foreground: #faf4eb;
+  --color-line: #8b7768;
+
+  --color-brand-signal: #fcd908;
 }
 
 .dark {
-  --color-background: #17140f;
-  --color-surface: #221e19;
-  --color-foreground: #f7efeb;
-  --color-text-secondary: #b8aca3;
-  --color-accent: #c1502e;
-  --color-accent-foreground: #fff8f5;
-  --color-inverted-surface: #f7f1ea;
-  --color-inverted-foreground: #1e1b19;
-  --color-line: #b8aca3;
+  --color-background: #24160f;
+  --color-surface: #2d1c12;
+  --color-foreground: #faf4eb;
+  --color-text-secondary: #c8b8a8;
+  --color-accent: #c59435;
+  --color-accent-foreground: #2b190f;
+  --color-inverted-surface: #402513;
+  --color-inverted-foreground: #faf4eb;
+  --color-line: #806b5a;
+  --color-brand-signal: #fcd908;
 }
 
 @theme inline {
