@@ -2,26 +2,25 @@ import type { Metadata } from "next";
 import { Fraunces, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: "Tov Interiors",
-  description: "Full-service interior design, architecture, construction, and facility management.",
-};
-
 const fraunces = Fraunces({
   subsets: ["latin"],
-  variable: "--font-display",
-  weight: ["400", "500", "600"],
+  variable: "--font-fraunces",
 });
 
 const hankenGrotesk = Hanken_Grotesk({
   subsets: ["latin"],
-  variable: "--font-body",
+  variable: "--font-hanken-grotesk",
 });
+
+export const metadata: Metadata = {
+  title: "Tov Interiors and Integrated Services",
+  description: "Interior design, construction and facility management under one roof.",
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${hankenGrotesk.variable}`}>
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${fraunces.variable} ${hankenGrotesk.variable}`}>{children}</body>
     </html>
   );
 }
