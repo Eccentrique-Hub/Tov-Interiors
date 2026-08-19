@@ -10,11 +10,11 @@ const navLinks = [
 
 export function NavBar() {
   return (
-    <header className="absolute inset-x-0 top-0 z-50 text-accent-foreground">
-      <div className="mx-auto flex max-w-360 items-center justify-between px-6 py-6 lg:px-10">
+    <header className="sticky top-0 z-50 text-accent-foreground bg-background/95 backdrop-blur">
+      <div className="mx-auto flex max-w-360 items-center justify-between px-5 py-5 lg:px-10">
         <Link
           href="/"
-          className="font-display text-2xl leading-none tracking-tight"
+          className="font-display text-2xl leading-none tracking-tight text-accent"
           aria-label="Tov home"
         >
           Tov
@@ -28,7 +28,7 @@ export function NavBar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-xs font-semibold tracking-wide text-accent-foreground/85 transition-colors hover:text-accent-foreground"
+              className="text-xs font-semibold tracking-wide text-foreground transition-colors hover:text-accent"
             >
               {link.label}
             </Link>
@@ -37,13 +37,13 @@ export function NavBar() {
 
         <Link
           href="/book"
-          className="hidden bg-accent px-5 py-3 text-xs font-semibold tracking-wide transition-colors hover:bg-[#a94124] md:inline-flex"
+          className="hidden bg-accent px-5 py-3 text-xs font-semibold tracking-wide text-accent-foreground transition-colors hover:bg-[#a94124] md:inline-flex"
         >
           Book a consultation
         </Link>
 
         <details className="relative md:hidden">
-          <summary className="cursor-pointer list-none border border-accent-foreground/50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em]">
+          <summary className="cursor-pointer list-none border border-accent px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-accent">
             Menu
           </summary>
 
@@ -62,7 +62,7 @@ export function NavBar() {
             ))}
             <Link
               href="/book"
-              className="mt-2 bg-accent px-3 py-3 text-center text-sm font-semibold"
+              className="mt-2 bg-accent px-3 py-3 text-center text-sm font-semibold text-accent-foreground"
             >
               Book a consultation
             </Link>
