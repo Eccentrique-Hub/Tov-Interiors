@@ -27,10 +27,10 @@ const socialLinks = [
 export function Footer() {
   return (
     <footer className="bg-inverted-surface text-inverted-foreground">
-      <div className="border-b border-inverted-foreground/15">
+      <div className="border-b border-inverted-foreground/15 bg-accent">
         <div className="mx-auto grid max-w-360 gap-10 px-6 py-14 lg:grid-cols-[1.2fr_0.8fr] lg:px-10 lg:py-20">
           <div>
-            <p className="mb-5 text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-accent">
+            <p className="mb-5 text-[0.65rem] font-semibold uppercase tracking-[0.22em]">
               Start a project
             </p>
             <h2 className="max-w-3xl font-display text-4xl leading-[1.04] tracking-tight sm:text-5xl lg:text-6xl">
@@ -44,7 +44,7 @@ export function Footer() {
             </p>
             <Link
               href="/book"
-              className="inline-flex w-fit bg-accent px-6 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-accent-foreground transition-colors hover:bg-[#a94124]"
+              className="inline-flex w-fit bg-background px-6 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-accent transition-colors hover:bg-[#f3ded8]"
             >
               Book a consultation
             </Link>

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Fraunces, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
+import { Footer } from "@/components/layout/Footer";
+import { NavBar } from "@/components/layout/NavBar";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -20,7 +22,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${fraunces.variable} ${hankenGrotesk.variable}`}>{children}</body>
+      <body className={`${fraunces.variable} ${hankenGrotesk.variable}`}>
+        <NavBar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
