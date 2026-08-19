@@ -32,7 +32,7 @@ export function Footer() {
   return (
     <footer className="bg-inverted-surface text-inverted-foreground">
       {/* Banner CTA */}
-      <div className="border-b border-inverted-foreground/15 bg-accent">
+      <div className="border-b border-inverted-foreground/15 bg-accent text-accent-foreground">
         <div className="mx-auto grid max-w-360 gap-10 px-6 py-14 lg:grid-cols-[1.2fr_0.8fr] lg:px-10 lg:py-20">
           <div>
             <p className="mb-5 text-[0.65rem] font-semibold uppercase tracking-[0.22em]">

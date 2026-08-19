@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -12,14 +13,19 @@ export function NavBar() {
   return (
     <header className="sticky top-0 z-50 text-accent-foreground bg-background/95 backdrop-blur">
       <div className="mx-auto flex max-w-360 items-center justify-between px-5 py-5 lg:px-10">
-        <Link
-          href="/"
-          className="font-display text-2xl leading-none tracking-tight text-accent"
-          aria-label="Tov home"
-        >
-          Tov
-          <span className="mt-1 block font-body text-[0.5rem] font-semibold uppercase tracking-[0.24em]">
-            Interiors + Services
+        {/* TO BE EDITED WHEN THE CORRECT LOGO FORMAT IS GOTTEN */}
+        <Link href="/" className="group flex items-center gap-3" aria-label="Tov home">
+          <span className="flex size-10 shrink-0 items-center justify-center bg-inverted-surface transition-transform duration-200 group-hover:scale-105">
+            <Image src="/logo.jpg" alt="" width={23} height={23} className="h-auto w-9" />
+          </span>
+
+          <span>
+            <span className="block font-display text-2xl leading-none tracking-tight text-accent">
+              Tov
+            </span>
+            <span className="mt-1 block font-body text-[0.5rem] font-semibold uppercase tracking-[0.24em] text-foreground">
+              Interiors + Services
+            </span>
           </span>
         </Link>
 
@@ -37,7 +43,7 @@ export function NavBar() {
 
         <Link
           href="/book"
-          className="hidden bg-accent px-5 py-3 text-xs font-semibold tracking-wide text-accent-foreground transition-colors hover:bg-[#a94124] md:inline-flex"
+          className="hidden bg-accent px-5 py-3 text-xs font-semibold tracking-wide text-accent-foreground transition-colors hover:bg-[#8f651c] md:inline-flex"
         >
           Book a consultation
         </Link>
