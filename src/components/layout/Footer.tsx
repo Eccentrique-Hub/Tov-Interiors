@@ -119,7 +119,7 @@ export function Footer() {
               +234 902 936 7190
             </a>
             <a
-              href="mailto:hello@tovinteriors.com"
+              href="mailto:designstov@gmail.com"
               className="mt-5 block text-sm text-inverted-foreground/65 transition-colors hover:text-inverted-foreground"
             >
               designstov@gmail.com
