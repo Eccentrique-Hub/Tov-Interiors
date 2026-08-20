@@ -99,7 +99,8 @@ export default function Home() {
 
             <p className="mt-8 max-w-xl text-sm leading-7 text-inverted-foreground/80 sm:text-base">
               Tov carries a space from first sketch through construction to the everyday running of
-              the finished result—one team, one accountable standard, start to well past the finish.
+              the finished result. One team, one standard, held from the first meeting to well past
+              handover.
             </p>
 
             <div className="mt-9 flex flex-wrap gap-3">
@@ -163,8 +164,8 @@ export default function Home() {
               Seven services, one continuous team.
             </h2>
             <p className="mt-7 max-w-sm text-sm leading-7 text-text-secondary">
-              Engage us for the whole journey or a single stage—the same standard applies either
-              way.
+              Engage us for the whole journey or a single stage. The standard doesn&apos;t change
+              either way.
             </p>
           </div>
 
@@ -294,7 +295,7 @@ export default function Home() {
               You’ll always know exactly where your project stands.
             </h2>
             <p className="mt-7 text-sm leading-7 text-text-secondary">
-              Trust is earned through clarity, not slogans. Here is how we keep every project
+              We don&apos;t think trust needs a slogan. Here is how we actually keep a project
               transparent.
             </p>
           </div>
@@ -303,7 +304,7 @@ export default function Home() {
             {[
               [
                 "A single point of contact",
-                "One team owns the whole project. You always know who to ask—and they know the answer.",
+                "One team owns the whole project, so you always know who to ask, and they always have the answer.",
               ],
               [
                 "Costs on the table",
