@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -10,10 +13,14 @@ const navLinks = [
 ];
 
 export function NavBar() {
+  const pathname = usePathname();
+
+  const isActivePath = (href: string) =>
+    pathname === href || (href !== "/" && pathname.startsWith(href));
+
   return (
     <header className="sticky top-0 z-50 text-accent-foreground bg-background/95 backdrop-blur">
       <div className="mx-auto flex max-w-360 items-center justify-between px-5 py-5 lg:px-10">
-        {/* TO BE EDITED WHEN THE CORRECT LOGO FORMAT IS GOTTEN */}
         <Link href="/" className="group flex items-center gap-3" aria-label="Tov home">
           <span className="flex size-10 shrink-0 items-center justify-center bg-inverted-surface transition-transform duration-200 group-hover:scale-105">
             <Image src="/logo.jpg" alt="" width={23} height={23} className="h-auto w-9" />
@@ -34,7 +41,10 @@ export function NavBar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-xs font-semibold tracking-wide text-foreground transition-colors hover:text-accent"
+              aria-current={isActivePath(link.href) ? "page" : undefined}
+              className={`text-xs font-semibold tracking-wide transition-colors ${
+                isActivePath(link.href) ? "text-accent" : "text-foreground hover:text-accent"
+              }`}
             >
               {link.label}
             </Link>
@@ -61,7 +71,10 @@ export function NavBar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="px-3 py-3 text-sm transition-colors hover:bg-inverted-foreground/10"
+                aria-current={isActivePath(link.href) ? "page" : undefined}
+                className={`px-3 py-3 text-sm transition-colors hover:bg-inverted-foreground/10 ${
+                  isActivePath(link.href) ? "text-accent" : ""
+                }`}
               >
                 {link.label}
               </Link>
