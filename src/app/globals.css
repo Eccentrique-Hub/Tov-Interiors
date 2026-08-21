@@ -15,6 +15,7 @@
   --color-line: #8b7768;
 
   --color-brand-signal: #fcd908;
+  --color-error: #a3342c;
 }
 
 .dark {
@@ -24,10 +25,13 @@
   --color-text-secondary: #c8b8a8;
   --color-accent: #c59435;
   --color-accent-foreground: #2b190f;
+
   --color-inverted-surface: #402513;
   --color-inverted-foreground: #faf4eb;
   --color-line: #806b5a;
+
   --color-brand-signal: #fcd908;
+  --color-error: #a3342c;
 }
 
 @theme inline {
@@ -40,6 +44,8 @@
   --color-inverted-surface: var(--color-inverted-surface);
   --color-inverted-foreground: var(--color-inverted-foreground);
   --color-line: var(--color-line);
+
+  --color-error: var(--color-error);
 
   --font-display: var(--font-fraunces), serif;
   --font-body: var(--font-hanken-grotesk), sans-serif;
