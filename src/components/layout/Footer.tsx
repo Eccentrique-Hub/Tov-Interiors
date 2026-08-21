@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const services = [
   "Interior Architecture & Design",
@@ -29,34 +32,38 @@ const socialLinks = [
 ];
 
 export function Footer() {
+  const pathname = usePathname();
+  const hideBookingCta = pathname.startsWith("/book");
+
   return (
     <footer className="bg-inverted-surface text-inverted-foreground">
-      {/* Banner CTA */}
-      <div className="border-b border-inverted-foreground/15 bg-accent text-accent-foreground">
-        <div className="mx-auto grid max-w-360 gap-10 px-6 py-14 lg:grid-cols-[1.2fr_0.8fr] lg:px-10 lg:py-20">
-          <div>
-            <p className="mb-5 text-[0.65rem] font-semibold uppercase tracking-[0.22em]">
-              Start a Conversation
-            </p>
-            <h2 className="max-w-3xl font-display text-4xl leading-[1.04] tracking-tight sm:text-5xl lg:text-6xl">
-              From a rough sketch to an empty room, we bring spatial visions to life.
-            </h2>
-          </div>
+      {!hideBookingCta && (
+        <div className="border-b border-inverted-foreground/15 bg-accent text-accent-foreground">
+          <div className="mx-auto grid max-w-360 gap-10 px-6 py-14 lg:grid-cols-[1.2fr_0.8fr] lg:px-10 lg:py-20">
+            <div>
+              <p className="mb-5 text-[0.65rem] font-semibold uppercase tracking-[0.22em]">
+                Start a Conversation
+              </p>
+              <h2 className="max-w-3xl font-display text-4xl leading-[1.04] tracking-tight sm:text-5xl lg:text-6xl">
+                From a rough sketch to an empty room, we bring spatial visions to life.
+              </h2>
+            </div>
 
-          <div className="flex flex-col justify-end lg:items-end">
-            <p className="mb-6 max-w-md text-sm leading-6 text-inverted-foreground/80 lg:text-right">
-              Whether you are acquiring a new site or refining an existing sanctuary, we define the
-              strategic next steps for your space.
-            </p>
-            <Link
-              href="/book"
-              className="inline-flex w-fit bg-background px-6 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-accent transition-colors hover:bg-accent-foreground"
-            >
-              Book a Consultation
-            </Link>
+            <div className="flex flex-col justify-end lg:items-end">
+              <p className="mb-6 max-w-md text-sm leading-6 text-inverted-foreground/80 lg:text-right">
+                Whether you are acquiring a new site or refining an existing sanctuary, we define
+                the strategic next steps for your space.
+              </p>
+              <Link
+                href="/book"
+                className="inline-flex w-fit bg-background px-6 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-accent transition-colors hover:bg-accent-foreground"
+              >
+                Book a Consultation
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       {/* Main Footer Links */}
       <div className="mx-auto max-w-360 px-6 py-12 lg:px-10 lg:py-16">
@@ -119,7 +126,7 @@ export function Footer() {
               +234 902 936 7190
             </a>
             <a
-              href="mailto:designstov@gmail.com"
+              href="mailto:hello@tovinteriors.com"
               className="mt-5 block text-sm text-inverted-foreground/65 transition-colors hover:text-inverted-foreground"
             >
               designstov@gmail.com
