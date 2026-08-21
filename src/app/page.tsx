@@ -1,36 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
-const services = [
-  {
-    title: "Interior Design",
-    description: "Considered, liveable interiors resolved down to the last detail.",
-  },
-  {
-    title: "Renovation",
-    description: "Reworking existing spaces with minimal disruption and maximum care.",
-  },
-  {
-    title: "Custom Furniture & Décor",
-    description: "Bespoke pieces and carefully sourced finishing objects.",
-  },
-  {
-    title: "Project Management",
-    description: "One point of contact from brief, budget and delivery to handover.",
-  },
-  {
-    title: "Construction",
-    description: "In-house execution that turns approved drawings into built work.",
-  },
-  {
-    title: "Architectural & 3D Visualization",
-    description: "Clear visuals that let you understand a space before work begins.",
-  },
-  {
-    title: "Facility Management",
-    description: "Long-term maintenance, servicing and care after handover.",
-  },
-];
+import { services } from "@/lib/site-data";
 
 const projects = [
   {
@@ -175,8 +145,12 @@ export default function Home() {
                 key={service.title}
                 className="grid gap-4 border-b border-foreground/15 py-6 sm:grid-cols-[0.9fr_1fr] sm:gap-8"
               >
-                <h3 className="font-display text-2xl leading-tight">{service.title}</h3>
-                <p className="text-sm leading-6 text-text-secondary">{service.description}</p>
+                <h3 className="font-display text-2xl leading-tight">
+                  {service.titleShort ?? service.title}
+                </h3>
+                <p className="text-sm leading-6 text-text-secondary">
+                  {service.homeDescription ?? service.description}
+                </p>
               </div>
             ))}
           </div>
